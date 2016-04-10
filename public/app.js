@@ -63,14 +63,8 @@ angular.module('todoApp', [])
     function element_date (input) {
       for (var i = 0; i < app.room_1.length; i++) {
         var range = moment().range(app.room_1[i].start, app.room_1[i].end)
-        console.log('log' + range.contains(input.start), range.contains(input.end))
-        if (range.contains(input.start) && range.contains(input.end)) {
-          return false
-        }
-        if (range.contains(input.start)) {
-          return false
-        }
-        if (range.contains(input.end)) {
+        var date_insert = moment().range(input.start, input.end)
+        if (date_insert.contains(range)) {
           return false
         }
       }
