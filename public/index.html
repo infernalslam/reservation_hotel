@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app="todoApp">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-range/2.2.0/moment-range.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-range/2.2.0/moment-range.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body ng-controller="myApp as app">
+  <div class="container-fluid">
+    <div clss="row">
+      <div class="col-xs-12">
+        <center>{{app.title}}</center>
+        <br> <center>Name
+        <input type="text" ng-model="input.name"> Surname
+        <input type="text" ng-model="input.surname"> Room
+        <input type="number" ng-model="input.room" min="1" max="6"> check-in
+        <input type="date" ng-model="input.start"> check-out
+        <input type="date" ng-model="input.end">
+        <button type="button" ng-click="app.add(input)">booking</button>
+        </center>
+        <hr>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- row -->
+    <div class="row">
+      <div class="col-xs-2">
+        <center>room1</center>
+        <div ng-repeat="show in app.room_1">
+          <span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
+          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <center>room2</center>
+        <div ng-repeat="show in app.room_2">
+          {{app.setTime(show.start)}} {{app.setTime(show.end)}}
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <center>room3</center>
+        <div ng-repeat="show in app.room_3">
+          {{app.setTime(show.start)}} {{app.setTime(show.end)}}
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <center>room4</center>
+        <div ng-repeat="show in app.room_4">
+          {{app.setTime(show.start)}} {{app.setTime(show.end)}}
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <center>room5</center>
+        <div ng-repeat="show in app.room_5">
+          {{app.setTime(show.start)}} {{app.setTime(show.end)}}
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <center>room6</center>
+        <div ng-repeat="show in app.room_6">
+          {{app.setTime(show.start)}} {{app.setTime(show.end)}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- container -->
+</body>
+
+</html>
