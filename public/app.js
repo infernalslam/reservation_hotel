@@ -53,18 +53,21 @@ angular.module('todoApp', [])
         if (app.room_1.length === 0) {
           return true
         }
-        if (element_date(input) === true) {
+        if (element_date_1(input) === true) {
           return true
-        } else if (element_date(input) === false) {
+        } else if (element_date_1(input) === false) {
           return false
         }
       }
     }
-    function element_date (input) {
+    function element_date_1 (input) {
       for (var i = 0; i < app.room_1.length; i++) {
         var range = moment().range(app.room_1[i].start, app.room_1[i].end)
         var date_insert = moment().range(input.start, input.end)
         if (date_insert.contains(range)) {
+          return false
+        }
+        if (range.contains(input.start) || range.contains(input.end)) {
           return false
         }
       }
