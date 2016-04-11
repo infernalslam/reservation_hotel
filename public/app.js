@@ -1,4 +1,4 @@
-/*global angular moment*/
+/*global angular moment $*/
 angular.module('todoApp', [])
   .controller('myApp', function () {
     var app = this
@@ -72,5 +72,16 @@ angular.module('todoApp', [])
         }
       }
       return true
+    }
+    calendar()
+    function calendar () {
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+        },
+        editable: true
+      })
     }
   })
