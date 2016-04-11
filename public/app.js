@@ -12,6 +12,7 @@ angular.module('todoApp', [])
     app.add = function (input) {
       if (check_date(input) === true) {
         insert(input)
+        // events_view(input)
       } else console.log('Nooooo')
     }
     function build_json (input) {
@@ -83,7 +84,7 @@ angular.module('todoApp', [])
         },
         events: [
           {
-            title: 'room1',
+            title: 'test insert',
             start: '2016-04-12',
             end: '2016-04-13'
           }
