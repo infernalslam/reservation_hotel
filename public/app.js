@@ -81,7 +81,13 @@ angular.module('todoApp', [])
           center: 'title',
           right: 'month,agendaWeek,agendaDay'
         },
-        editable: true
+        events: [
+          {
+            title: 'room1',
+            start: '2016-04-12',
+            end: '2016-04-13'
+          }
+        ]
       })
     }
   })
