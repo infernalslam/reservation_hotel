@@ -21,7 +21,7 @@ update
 1. add fullcalendar.io
 2. mongodb (mongoose)
 3. re-code & ui interface
-4. plase use import code
+4. plz use import code
 ```
 ```html
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap-combined.min.css" rel="stylesheet" />
