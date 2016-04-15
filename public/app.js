@@ -9,12 +9,22 @@ angular.module('todoApp', [])
     app.room_4 = []
     app.room_5 = []
     app.room_6 = []
+    var json_data = {
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month'
+      }
+    }
+    var events = {}
+    calendar()
     app.add = function (input) {
       if (check_date(input) === true) {
         insert(input)
-        // events_view(input)
+      // events_view(input)
       } else console.log('Nooooo')
     }
+    // function events_view () {}
     function build_json (input) {
       var data = {
         name: input.name,
@@ -29,6 +39,14 @@ angular.module('todoApp', [])
       var json = build_json(input)
       if (input.room === 1) {
         app.room_1.push(json)
+        events = {
+          title: 'ห้องพักที่1',
+          start: input.start,
+          end: input.end
+        }
+        // events.push(dateinput)
+        console.log(events)
+        calendar()
       }
       if (input.room === 2) {
         app.room_2.push(json)
@@ -74,21 +92,10 @@ angular.module('todoApp', [])
       }
       return true
     }
-    calendar()
+    // calendar()
+    $('#calendar').fullCalendar(json_data) // function calendar json
     function calendar () {
-      $('#calendar').fullCalendar({
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay'
-        },
-        events: [
-          {
-            title: 'test insert',
-            start: '2016-04-12',
-            end: '2016-04-13'
-          }
-        ]
-      })
+      // $('#calendar').fullCalendar(json_data) // function calendar json
+      $('#calendar').fullCalendar('renderEvent', events, true)
     }
   })
