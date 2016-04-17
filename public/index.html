@@ -30,8 +30,8 @@
         <center>{{app.title}}</center>
         <ul class="nav nav-tabs">
           <li role="presentation" class="active" ng-init="page=1" ng-click="page=1"><a href="#">RESERVATION</a></li>
-          <li role="presentation" ng-click="page=2"><a href="#">Report</a></li>
-          <li role="presentation" ng-click="page=3"><a href="#">Search</a></li>
+          <li role="presentation" ng-click="page=2"><a href="#">Search</a></li>
+          <!-- <li role="presentation" ng-click="page=3"><a href="#">Search</a></li> -->
         </ul>
       </div>
       <!-- row -->
@@ -51,52 +51,6 @@
     </div> <!-- row -->
   </div>
   <div ng-show="page === 2">
-    <div class="row">
-      <div class="col-xs-2">
-        <center>room1</center>
-        <div ng-repeat="show in app.room_1">
-          <center><span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
-          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}</center> <br>
-        </div>
-      </div>
-      <div class="col-xs-2">
-        <center>room2</center>
-        <div ng-repeat="show in app.room_2">
-          <center><span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
-          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}</center> <br>
-        </div>
-      </div>
-      <div class="col-xs-2">
-        <center>room3</center>
-        <div ng-repeat="show in app.room_3">
-          <center><span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
-          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}</center> <br>
-        </div>
-      </div>
-      <div class="col-xs-2">
-        <center>room4</center>
-        <div ng-repeat="show in app.room_4">
-          <center><span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
-          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}</center> <br>
-        </div>
-      </div>
-      <div class="col-xs-2">
-        <center>room5</center>
-        <div ng-repeat="show in app.room_5">
-          <center><span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
-          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}</center> <br>
-        </div>
-      </div>
-      <div class="col-xs-2">
-        <center>room6</center>
-        <div ng-repeat="show in app.room_6">
-          <center><span class="label label-success">check-in</span> {{app.setTime(show.start)}} <br> 
-          <span class="label label-warning">check-out</span> {{app.setTime(show.end)}}</center> <br>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div ng-show="page === 3">
     <div class="col-xs-12">
       <div class="input-group">
       <span class="input-group-btn">
