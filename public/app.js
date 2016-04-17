@@ -45,7 +45,7 @@ angular.module('todoApp', [])
       if (input.room === 1) {
         app.room_1.push(json)
         events_1 = {
-          title: 'ห้องพักที่1',
+          title: 'ห้องพักที่1 : ' + input.name + ' ' + input.surname,
           start: input.start,
           end: input.end
         }
@@ -55,7 +55,7 @@ angular.module('todoApp', [])
       if (input.room === 2) {
         app.room_2.push(json)
         events_2 = {
-          title: 'ห้องพักที่2',
+          title: 'ห้องพักที่2 : ' + input.name + ' ' + input.surname,
           start: input.start,
           end: input.end
         }
@@ -65,7 +65,7 @@ angular.module('todoApp', [])
       if (input.room === 3) {
         app.room_3.push(json)
         events_3 = {
-          title: 'ห้องพักที่3',
+          title: 'ห้องพักที่3 : ' + input.name + ' ' + input.surname,
           start: input.start,
           end: input.end
         }
@@ -75,7 +75,7 @@ angular.module('todoApp', [])
       if (input.room === 4) {
         app.room_4.push(json)
         events_4 = {
-          title: 'ห้องพักที่4',
+          title: 'ห้องพักที่4 : ' + input.name + ' ' + input.surname,
           start: input.start,
           end: input.end
         }
@@ -85,7 +85,7 @@ angular.module('todoApp', [])
       if (input.room === 5) {
         app.room_5.push(json)
         events_5 = {
-          title: 'ห้องพักที่5',
+          title: 'ห้องพักที่5 : ' + input.name + ' ' + input.surname,
           start: input.start,
           end: input.end
         }
@@ -95,7 +95,7 @@ angular.module('todoApp', [])
       if (input.room === 6) {
         app.room_6.push(json)
         events_6 = {
-          title: 'ห้องพักที่6',
+          title: 'ห้องพักที่6 : ' + input.name + ' ' + input.surname,
           start: input.start,
           end: input.end
         }
