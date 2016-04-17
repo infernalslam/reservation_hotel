@@ -1,5 +1,5 @@
 # <center>Reservation</center>
-<center>[![naijin screenshot](<a href="http://www.uppic.org/share-77CF_57134C7E.html"><img src="http://www.uppic.org/image-77CF_57134C7E.jpg" border="0"></a>)](<a href="http://www.uppic.org/share-77CF_57134C7E.html"><img src="http://www.uppic.org/image-77CF_57134C7E.jpg" border="0"></a>)</center>
+<center>[![naijin screenshot](http://www.uppic.org/image-77CF_57134C7E.jpg)](http://www.uppic.org/image-77CF_57134C7E.jpg)</center>
  [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 A code powered calculate built with AngularJS.
