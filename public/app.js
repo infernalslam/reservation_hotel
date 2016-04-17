@@ -246,10 +246,8 @@ angular.module('todoApp', [])
       }
       return true
     }
-    // calendar()
     $('#calendar').fullCalendar(json_data) // function calendar json
     function calendar () {
-      // $('#calendar').fullCalendar(json_data) // function calendar json
       $('#calendar').fullCalendar('renderEvent', events_1, true)
       $('#calendar').fullCalendar('renderEvent', events_2, true)
       $('#calendar').fullCalendar('renderEvent', events_3, true)
