@@ -22,6 +22,12 @@ angular.module('todoApp', [])
     var events_4 = {}
     var events_5 = {}
     var events_6 = {}
+    // var count_1 = 0
+    // var count_2 = 0
+    // var count_3 = 0
+    // var count_4 = 0
+    // var count_5 = 0
+    // var count_6 = 0
     calendar()
     app.add = function (input) {
       if (check_date(input) === true) {
@@ -254,5 +260,9 @@ angular.module('todoApp', [])
       $('#calendar').fullCalendar('renderEvent', events_4, true)
       $('#calendar').fullCalendar('renderEvent', events_5, true)
       $('#calendar').fullCalendar('renderEvent', events_6, true)
+    }
+    app.del_room1 = function (index, data) {
+      app.room_1.splice(index, 1)
+      console.log(app.room_1)
     }
   })

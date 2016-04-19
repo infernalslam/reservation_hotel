@@ -59,7 +59,7 @@
       <input type="text" class="form-control" placeholder="Search for..." ng-model="searchText">
     </div><!-- /input-group -->
       <div ng-repeat="show in app.room_1 | filter:searchText">
-        {{show.name}} {{show.surname}} {{show.room}}
+        {{show.name}} {{show.surname}} {{show.room}} <button type="button" ng-click="app.del_room1($index, show)">del</button>
       </div>
       <div ng-repeat="show in app.room_2 | filter:searchText">
         {{show.name}} {{show.surname}} {{show.room}}
