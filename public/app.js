@@ -1,6 +1,6 @@
 /*global angular moment $*/
-angular.module('todoApp', [])
-  .controller('myApp', function () {
+angular.module('todoApp', ['ngAlertify'])
+  .controller('myApp', function (alertify) {
     var app = this
     app.title = 'Hotel_Booking'
     app.room_1 = []
@@ -22,20 +22,16 @@ angular.module('todoApp', [])
     var events_4 = {}
     var events_5 = {}
     var events_6 = {}
-    // var count_1 = 0
-    // var count_2 = 0
-    // var count_3 = 0
-    // var count_4 = 0
-    // var count_5 = 0
-    // var count_6 = 0
-    calendar()
     app.add = function (input) {
       if (check_date(input) === true) {
         insert(input)
-      // events_view(input)
-      } else console.log('Nooooo')
+      } else alertDisplay(input)
     }
-    // function events_view () {}
+    function alertDisplay (input) {
+      console.log(input)
+      var str = 'ห้อง:' + input.room + 'มีลูกค้า:' + input.name + 'จองเเล้วตั้งเเต่วันที่' + app.time(input.start) + ' - ' + app.time(input.end)
+      alertify.log(str)
+    }
     function build_json (input) {
       var data = {
         name: input.name,
@@ -110,6 +106,9 @@ angular.module('todoApp', [])
       }
     }
     app.setTime = function (time) {
+      return moment(time).format('ll')
+    }
+    app.time = function (time) {
       return moment(time).format('ll')
     }
     function check_date (input) {
@@ -260,9 +259,5 @@ angular.module('todoApp', [])
       $('#calendar').fullCalendar('renderEvent', events_4, true)
       $('#calendar').fullCalendar('renderEvent', events_5, true)
       $('#calendar').fullCalendar('renderEvent', events_6, true)
-    }
-    app.del_room1 = function (index, data) {
-      app.room_1.splice(index, 1)
-      console.log(app.room_1)
     }
   })
