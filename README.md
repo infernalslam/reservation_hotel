@@ -1,5 +1,5 @@
 # <center>Reservation</center>
-<center>[![naijin screenshot](http://www.uppic.org/image-77CF_57134C7E.jpg)](http://www.uppic.org/image-77CF_57134C7E.jpg)</center>
+<center>[![reservation screenshot](https://raw.githubusercontent.com/infernalslam/reservation_hotel/master/public/pan1.png)](https://raw.githubusercontent.com/infernalslam/reservation_hotel/master/public/pan1.png)</center>
  [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 A code powered calculate built with AngularJS.
